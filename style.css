@@ -1,0 +1,162 @@
+:root {
+  font-size: 62.5%;
+  --ff-primary: "Roboto", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: #000000;
+  min-height: 100vh;
+}
+
+body * {
+  color: #ffffff;
+  font-family: var(--ff-primary);
+}
+
+/*Essa classe faz com que o label desapareça da página, porém os leitores de tela conseguem ler*/
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+#app {
+  max-width: 112rem;
+  margin: 8rem auto;
+  padding: 2rem;
+}
+
+/*CABEÇALHO DA TABELA*/
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8rem;
+}
+
+header .search {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+header .search input {
+  background-color: #06181c;
+  width: 46rem;
+  padding: 1.6rem;
+
+  font-size: 1.6rem;
+  line-height: 100%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+header .search button {
+  display: flex;
+  align-items: center;
+  padding: 1.2rem 3.2rem;
+  gap: 0.8rem;
+  background-color: #065e7c;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/*CORPO DA TABELA*/
+
+table {
+  border-bottom: 1px solid #4a808c;
+  margin: auto;
+  width: 100%;
+  /*Essa propriedade faz com que tire os espaços entre os th*/
+  border-collapse: collapse;
+}
+
+table thead tr th {
+  background-color: #092d38;
+  padding: 1.5rem;
+  text-align: left;
+}
+
+table th:first-child {
+  border-radius: 12px 0 0 0;
+}
+
+table th:last-child {
+  border-radius: 0 12px 0 0;
+}
+
+table td {
+  padding: 1.5rem;
+  text-align: left;
+}
+.user {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+.user a {
+  text-decoration: none;
+}
+
+.user a p {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.user img {
+  width: 5.6rem;
+  height: 5.6rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+tr:nth-child(even) {
+  background-color: #06181c;
+  border: 1px solid #4a808c;
+}
+
+.btn-remover {
+  background: transparent;
+  color: #f75a68;
+  font-size: 2rem;
+  border: none;
+
+  cursor: pointer;
+}
+
+/*Parte da tabela quando não tiver usuário*/
+.sem-users {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40rem;
+  gap: 6rem;
+  background-color: #06181c;
+  /* border-left: 1px solid #4a808c;
+  border-right: 1px solid #4a808c;
+  border-bottom: 1px solid #4a808c; */
+  border-radius: 0 0 12px 12px;
+}
+
+/*Fazendo o body desaparecer quando adicionar um usuário*/
+.hidden {
+  display: none;
+}
